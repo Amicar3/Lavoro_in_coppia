@@ -1,14 +1,13 @@
-const readline = require('readline');
+let num1String: string | null = prompt("Inserisci il primo numero:");
+let num2String: string | null = prompt("Inserisci il secondo numero:");
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+if (num1String && num2String) {
+  let num1: number = parseFloat(num1String);
+  let num2: number = parseFloat(num2String);
 
-rl.question('Inserisci il primo numero: ', (num1) => {
-  rl.question('Inserisci il secondo numero: ', (num2) => {
-    const sum = Number(num1) + Number(num2);
-    console.log('La somma è: ' + sum);
-    rl.close();
-  });
-});
+  let somma: number = num1 + num2;
+
+  console.log("Somma:", somma);
+} else {
+  console.log("Input non valido!");
+}
