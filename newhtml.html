@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pagina con bottone e stili CSS</title>
+  <style>
+    /* Regole stilistiche per il bottone */
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .button {
+      padding: 20px 40px; /* Aumenta il valore del padding per rendere il bottone più grande */
+      background-color: blueviolet;
+      color: black;
+      font-size: 24px; /* Aumenta il valore del font-size per rendere il testo del bottone più grande */
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    .button:hover {
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+<body background="question-mark-background-1909040_960_720.png" style="background-size: cover;">
+  <div class="center">
+    <button class="button" onclick="checkNumber()">Bottone If</button>
+  </div>
+
+  <script>
+    function checkNumber() {
+      var input = prompt("Dammi un numero:");
+      var number = parseInt(input);
+      
+      if (number <= 15) {
+        alert("E' minore di 15");
+      } else {
+        alert("E' maggiore di 15 bravo");
+      }
+    }
+  </script>
+</body>
+</html>
